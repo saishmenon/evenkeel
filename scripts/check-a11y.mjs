@@ -29,13 +29,25 @@ const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePa
 const context = await browser.newContext();
 const page = await context.newPage();
 let fails = 0, runs = 0;
+// In GitHub Actions, also print each problem as an annotation so it shows on the run page.
+const ci = !!process.env.GITHUB_ACTIONS;
+const report = (msg) => { console.log(`✗ ${msg}`); if (ci) console.log(`::error title=Accessibility::${msg.replace(/\n/g, ' ')}`); };
 for (const s of stories) for (const g of combos) {
-  await page.goto(`http://localhost:6010/iframe.html?id=${s.id}&viewMode=story&globals=${g}`);
-  await page.waitForSelector('#storybook-root > *', { timeout: 15000 });
-  await page.waitForTimeout(250);
-  const r = await new AxeBuilder({ page }).include('#storybook-root').withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
-  runs++;
-  for (const v of r.violations) { fails++; console.log(`✗ ${s.id} [${g}] ${v.id}: ${v.help} (${v.nodes.length})`); }
+  try {
+    await page.goto(`http://localhost:6010/iframe.html?id=${s.id}&viewMode=story&globals=${g}`);
+    await page.waitForSelector('#storybook-root > *', { timeout: 15000 });
+    await page.waitForTimeout(250);
+    const r = await new AxeBuilder({ page }).include('#storybook-root').withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
+    runs++;
+    for (const v of r.violations) {
+      fails++;
+      const where = v.nodes.slice(0, 2).map((n) => n.target.join(' ')).join(' | ');
+      report(`${s.id} [${g}] ${v.id}: ${v.help} (${v.nodes.length}) at ${where}`);
+    }
+  } catch (e) {
+    fails++;
+    report(`${s.id} [${g}] did not render: ${String(e.message).split('\n')[0]}`);
+  }
 }
 console.log(`\n${runs} story checks · ${stories.length} stories × ${combos.length} themes · ${fails} violations`);
 await browser.close(); server.close();
