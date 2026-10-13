@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use Evenkeel in research or a publication, please cite it as below."
+title: "Evenkeel: a themeable design system for data-heavy web apps"
+type: software
+authors:
+  - name: "Saish"
+version: 1.1.0
+date-released: 2026-10-12
+license: MIT
+repository-code: "https://github.com/saishmenon/evenkeel"
+url: "https://saishmenon.github.io/evenkeel/"
+keywords:
+  - design system
+  - react
+  - figma
+  - design tokens
+  - accessibility

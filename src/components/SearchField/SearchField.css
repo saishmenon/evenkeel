@@ -1,0 +1,19 @@
+/* Search field: a soft filled pill with no border */
+.ek-search {
+  display: flex; align-items: center; gap: var(--space-2);
+  height: var(--control-height-md); padding: 0 var(--space-1) 0 var(--space-3);
+  background: var(--color-fill-tertiary); color: var(--color-label-secondary);
+  border-radius: var(--radius-control); font-family: var(--font-text); font-size: 14px;
+  transition: box-shadow var(--duration-quick) var(--easing-standard), background-color var(--duration-instant) var(--easing-standard);
+}
+.ek-search:hover { background: var(--color-fill-secondary); }
+.ek-search:focus-within { background: var(--color-background-primary); box-shadow: 0 0 0 1px var(--color-border-focus), 0 0 0 4px var(--color-accent-subtle-hover); }
+.ek-search > .ek-icon { flex: none; }
+.ek-search__native { flex: 1; min-width: 0; height: 100%; border: 0; background: transparent; color: var(--color-label-primary); font: inherit; outline: none; }
+.ek-search__native::placeholder { color: var(--color-label-tertiary); opacity: 1; }
+.ek-search__native::-webkit-search-cancel-button { display: none; }
+.ek-search__clear {
+  display: grid; place-items: center; width: 28px; height: 28px; flex: none;
+  border: 0; border-radius: var(--radius-control); background: transparent; color: var(--color-label-secondary); cursor: pointer;
+}
+.ek-search__clear:hover { background: var(--color-fill-secondary); color: var(--color-label-primary); }

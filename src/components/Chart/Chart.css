@@ -1,0 +1,34 @@
+.ek-chart { margin: 0; display: grid; gap: var(--space-3); font-family: var(--font-text); color: var(--color-label-secondary); font-size: 12px; line-height: 16px; font-variant-numeric: tabular-nums; }
+.ek-chart__legend { display: flex; flex-wrap: wrap; gap: var(--space-4); margin: 0; padding: 0; list-style: none; color: var(--color-label-primary); font-size: 13px; line-height: 18px; }
+.ek-chart__legend li { display: inline-flex; align-items: center; gap: var(--space-1_5); }
+.ek-chart__swatch { width: 10px; height: 10px; border-radius: 3px; background: var(--ek-tone); }
+.ek-chart__frame { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: var(--space-2); row-gap: var(--space-1_5); }
+.ek-chart__axis { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; margin: -8px 0; }
+.ek-chart__plot { position: relative; }
+.ek-chart__grid { position: absolute; left: 0; right: 0; height: 0; border-top: 1px solid var(--color-separator-default); }
+.ek-chart__grid:first-child { border-top-color: var(--color-separator-opaque); }
+.ek-chart__bars { position: absolute; inset: 0; display: flex; align-items: flex-end; gap: 8%; padding: 0 2%; }
+.ek-chart__group { flex: 1; height: 100%; display: flex; align-items: flex-end; justify-content: center; gap: 3px; }
+.ek-chart__bar { flex: 1; max-width: 28px; min-height: 2px; border-radius: 4px 4px 1px 1px; background: var(--ek-tone); transition: opacity var(--duration-instant) var(--easing-standard); }
+.ek-chart__bars:hover .ek-chart__bar:not(:hover) { opacity: 0.55; }
+.ek-chart__lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.ek-chart__line { fill: none; stroke: var(--ek-tone); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.ek-chart__area { fill: var(--ek-tone); opacity: 0.12; stroke: none; }
+.ek-chart__labels { display: flex; justify-content: space-between; padding: 0 2%; }
+.ek-chart__labels span { flex: 1; text-align: center; }
+.ek-chart [data-tone='accent'] { --ek-tone: var(--color-accent-solid); }
+.ek-chart [data-tone='neutral'] { --ek-tone: var(--color-label-tertiary); }
+.ek-chart [data-tone='success'] { --ek-tone: var(--color-success-solid); }
+.ek-chart [data-tone='warning'] { --ek-tone: var(--color-warning-solid); }
+.ek-chart [data-tone='danger'] { --ek-tone: var(--color-danger-solid); }
+.ek-chart [data-tone='info'] { --ek-tone: var(--color-info-solid); }
+.ek-chart__group--stacked { justify-content: center; }
+.ek-chart__stack { flex: 0 0 64%; max-width: 32px; display: flex; flex-direction: column-reverse; gap: 2px; min-height: 2px; }
+.ek-chart__seg { background: var(--ek-tone); min-height: 1px; border-radius: 2px; }
+.ek-chart__stack .ek-chart__seg:last-child { border-radius: 4px 4px 2px 2px; }
+.ek-chart__bars:hover .ek-chart__seg:not(:hover) { opacity: 0.55; }
+.ek-chart__band { fill: var(--ek-tone); opacity: 0.55; stroke: none; }
+.ek-chart__line--thin { stroke-width: 1.5; }
+/* Lines and areas run edge to edge, so their labels sit at the ends too. */
+.ek-chart__labels--edge { padding: 0; }
+.ek-chart__labels--edge span { flex: 0 0 auto; text-align: center; }

@@ -1,0 +1,12 @@
+.ek-inspector { display: flex; flex-direction: column; height: 100%; min-height: 0; background: var(--color-background-primary); font-family: var(--font-text); color: var(--color-label-primary); }
+.ek-inspector__header { display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-4) var(--space-4) var(--space-3) var(--space-5); }
+.ek-inspector__titles { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.ek-inspector__title { margin: 0; font-size: 15px; line-height: 22px; font-weight: 600; /* headline */ overflow-wrap: anywhere; }
+.ek-inspector__subtitle { margin: 0; color: var(--color-label-secondary); font-size: 13px; line-height: 18px; }
+.ek-inspector__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: 0 var(--space-5) var(--space-4); }
+.ek-inspector__body { flex: 1; min-height: 0; overflow: auto; border-top: 1px solid var(--color-separator-default); }
+.ek-inspector__footer { padding: var(--space-3) var(--space-5); border-top: 1px solid var(--color-separator-default); display: flex; gap: var(--control-gap); justify-content: flex-end; }
+.ek-inspector__section { display: grid; gap: var(--space-3); padding: var(--space-4) var(--space-5); font-size: 14px; line-height: 20px; }
+.ek-inspector__section + .ek-inspector__section { border-top: 1px solid var(--color-separator-default); }
+.ek-inspector__section-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+.ek-inspector__section-title { margin: 0; font-size: 13px; line-height: 18px; font-weight: 500; color: var(--color-label-secondary); /* subheadline-emphasized */ }

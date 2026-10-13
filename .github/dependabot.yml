@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      storybook:
+        patterns: ["storybook", "@storybook/*"]
+      build-tooling:
+        patterns: ["vite", "@vitejs/*", "typescript", "tsx"]
+      testing:
+        patterns: ["playwright", "@axe-core/*"]
+    ignore:
+      # React majors are a peer-dependency decision, not a bot one.
+      - dependency-name: "react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-dom"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: "ci"

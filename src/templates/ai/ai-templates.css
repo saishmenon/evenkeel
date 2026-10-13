@@ -1,0 +1,35 @@
+/* Layouts for the AI templates. Tokens only. */
+.tpl-ai-ask { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 0; min-height: calc(100dvh - 160px); margin: calc(var(--space-2) * -1) 0 0; border-radius: var(--radius-container); box-shadow: inset 0 0 0 1px var(--color-separator-default); overflow: hidden; background: var(--color-background-primary); }
+.tpl-ai-ask[data-canvas] { grid-template-columns: 240px minmax(0, 1fr) minmax(0, 1.1fr); }
+.tpl-ai-history { display: grid; align-content: start; gap: var(--space-4); padding: var(--space-4) var(--space-3); background: var(--color-background-secondary); border-right: 1px solid var(--color-separator-default); }
+.tpl-ai-history h2 { margin: 0 0 var(--space-1); padding: 0 var(--space-2); font-size: 12px; line-height: 16px; font-weight: 500; color: var(--color-label-secondary); }
+.tpl-ai-history ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.tpl-ai-history a { display: block; padding: var(--space-1_5) var(--space-2); border-radius: var(--radius-control); color: var(--color-label-primary); text-decoration: none; font-size: 14px; line-height: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tpl-ai-history a:hover { background: var(--color-fill-quaternary); }
+.tpl-ai-history a[aria-current='page'] { background: var(--color-fill-secondary); font-weight: 500; }
+.tpl-ai-history a:focus-visible { outline: 2px solid var(--color-border-focus); outline-offset: -2px; }
+.tpl-ai-main { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-width: 0; }
+.tpl-ai-thread { display: grid; gap: var(--space-6); align-content: start; padding: var(--space-6) var(--space-6) var(--space-4); max-width: 820px; width: 100%; margin: 0 auto; }
+.tpl-ai-composer { position: sticky; bottom: 0; padding: var(--space-3) var(--space-6) var(--space-4); max-width: 820px; width: 100%; margin: 0 auto; background: linear-gradient(to bottom, transparent, var(--color-background-primary) var(--space-4)); }
+.tpl-ai-canvas { min-width: 0; }
+@media (max-width: 1099px) { .tpl-ai-ask, .tpl-ai-ask[data-canvas] { grid-template-columns: minmax(0, 1fr); } .tpl-ai-history { display: none; } .tpl-ai-canvas { border-top: 1px solid var(--color-separator-default); } }
+
+.tpl-ai-panel { display: grid; gap: var(--space-5); }
+.tpl-ai-context { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1_5); font-size: 13px; line-height: 18px; color: var(--color-label-secondary); }
+.tpl-ai-context strong { color: var(--color-label-primary); font-weight: 500; }
+
+.tpl-ai-run { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--space-4); align-items: start; }
+.tpl-ai-run__side { display: grid; gap: var(--space-4); }
+@media (max-width: 999px) { .tpl-ai-run { grid-template-columns: minmax(0, 1fr); } }
+.tpl-ai-audit { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); font-size: 14px; line-height: 20px; }
+.tpl-ai-audit li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: var(--space-3); align-items: start; }
+
+.tpl-ai-dispute { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr); gap: var(--space-4); align-items: start; }
+@media (max-width: 999px) { .tpl-ai-dispute { grid-template-columns: minmax(0, 1fr); } }
+.tpl-ai-draft { display: grid; gap: var(--space-4); }
+.tpl-ai-draft__label { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); font-size: 13px; line-height: 18px; color: var(--color-label-secondary); }
+.tpl-ai-submit { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--color-separator-default); }
+
+.tpl-ai-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: var(--space-4); align-items: start; }
+.tpl-ai-stack { display: grid; gap: var(--space-3); }
+.tpl-ai-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-5); }

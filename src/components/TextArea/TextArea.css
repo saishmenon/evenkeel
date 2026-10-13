@@ -1,0 +1,2 @@
+.ek-textarea { align-items: stretch; padding: var(--space-2) var(--control-padding-x); }
+.ek-textarea .ek-box-input__native { resize: vertical; min-height: calc(var(--control-height-md) * 2); line-height: 20px; }

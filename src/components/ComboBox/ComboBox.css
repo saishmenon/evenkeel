@@ -1,0 +1,9 @@
+.ek-combo { display: block; }
+.ek-combo .ek-box-input > .ek-icon:last-child { color: var(--color-label-secondary); }
+.ek-combo__list { list-style: none; margin: 0; padding: var(--space-1); max-height: 280px; overflow: auto; }
+.ek-combo__option { display: flex; align-items: center; gap: var(--space-2); padding: var(--space-1_5) var(--space-2_5); border-radius: calc(var(--radius-control) - 2px); cursor: default; }
+.ek-combo__text { flex: 1; display: grid; }
+.ek-combo__desc { font-size: 12px; line-height: 16px; color: var(--color-label-secondary); }
+.ek-combo__option .ek-icon { color: var(--color-label-link); }
+.ek-combo__option--active { background: var(--color-accent-subtle); }
+.ek-combo__empty { padding: var(--space-3); color: var(--color-label-secondary); text-align: center; }

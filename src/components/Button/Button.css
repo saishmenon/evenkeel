@@ -1,0 +1,25 @@
+.ek-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: var(--control-gap);
+  height: var(--control-height-md);
+  padding: 0 var(--control-padding-x);
+  border: 0; border-radius: var(--radius-control);
+  font-family: var(--font-text); font-size: 14px; line-height: 20px; font-weight: 500; /* callout-emphasized */
+  white-space: nowrap; cursor: pointer; user-select: none;
+}
+.ek-button--sm { height: var(--control-height-sm); padding: 0 var(--space-3); gap: var(--space-1); font-size: 13px; line-height: 18px; }
+.ek-button--lg { height: var(--control-height-lg); padding: 0 var(--space-5); font-size: 15px; line-height: 22px; font-weight: 600; }
+.ek-button--full { width: 100%; }
+
+.ek-button--filled      { background: var(--color-accent-solid); color: var(--color-label-on-accent); }
+.ek-button--filled:hover:not(:disabled)      { background: var(--color-accent-solid-hover); }
+.ek-button--tinted      { background: var(--color-accent-subtle); color: var(--color-label-link); }
+.ek-button--tinted:hover:not(:disabled)      { background: var(--color-accent-subtle-hover); }
+.ek-button--gray        { background: var(--color-fill-tertiary); color: var(--color-label-primary); }
+.ek-button--gray:hover:not(:disabled)        { background: var(--color-fill-secondary); }
+.ek-button--plain       { background: transparent; color: var(--color-label-link); }
+.ek-button--plain:hover:not(:disabled)       { background: var(--color-fill-quaternary); }
+.ek-button--destructive { background: var(--color-danger-subtle); color: var(--color-danger-text); }
+.ek-button--destructive:hover:not(:disabled) { background: var(--color-danger-subtle-hover); }
+
+.ek-button[aria-busy='true'] { cursor: progress; }

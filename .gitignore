@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build output (regenerate with `npm run build`)
+build/
+dist/
+storybook-static/
+*.tgz
+
+# Test output
+test-results/
+playwright-report/
+coverage/
+
+# Logs and scratch
+*.log
+npm-debug.log*
+*.dbg
+*.dbg.*
+*.tmp
+*.bak
+scratch/
+.cache/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+.npmrc
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Local Figma working state (private file key)
+.figma-state.json

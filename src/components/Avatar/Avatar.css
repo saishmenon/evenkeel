@@ -1,0 +1,18 @@
+.ek-avatar {
+  display: inline-grid; place-items: center; flex: none; overflow: hidden;
+  width: var(--ek-avatar, 32px); height: var(--ek-avatar, 32px); border-radius: 999px;
+  font-family: var(--font-text); font-weight: 600; font-size: calc(var(--ek-avatar, 32px) * 0.4); line-height: 1;
+  background: var(--color-fill-tertiary); color: var(--color-label-primary);
+  box-shadow: inset 0 0 0 1px var(--color-separator-default);
+}
+.ek-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.ek-avatar--sm { --ek-avatar: 24px; }
+.ek-avatar--md { --ek-avatar: 32px; }
+.ek-avatar--lg { --ek-avatar: 40px; }
+.ek-avatar--xl { --ek-avatar: 64px; }
+/* Tints reuse colour roles, so they stay accessible in every theme and mode (and match Figma). */
+.ek-avatar[data-tint='accent'] { background: var(--color-accent-subtle); color: var(--color-label-link); }
+.ek-avatar[data-tint='info'] { background: var(--color-info-subtle); color: var(--color-info-text); }
+.ek-avatar[data-tint='success'] { background: var(--color-success-subtle); color: var(--color-success-text); }
+.ek-avatar[data-tint='warning'] { background: var(--color-warning-subtle); color: var(--color-warning-text); }
+.ek-avatar[data-tint='neutral'] { background: var(--color-fill-tertiary); color: var(--color-label-primary); }

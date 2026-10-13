@@ -1,0 +1,35 @@
+.ek-field { display: grid; gap: var(--field-gap); font-family: var(--font-text); }
+.ek-field__top { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-2); }
+.ek-field__label { font-size: 14px; line-height: 20px; font-weight: 500; color: var(--color-label-primary); }
+.ek-field__req { color: var(--color-danger-text); }
+.ek-field__aside { font-size: 12px; line-height: 16px; color: var(--color-label-secondary); font-variant-numeric: tabular-nums; }
+.ek-field__msg { display: flex; gap: var(--space-1); align-items: flex-start; margin: 0; font-size: 12px; line-height: 16px; color: var(--color-label-secondary); }
+.ek-field__msg--error { color: var(--color-danger-text); }
+.ek-field__msg .ek-icon { flex: none; margin-top: 0; width: 16px; height: 16px; }
+
+/* The box shared by Text field, Text area and Select */
+.ek-box-input {
+  display: flex; align-items: center; gap: var(--space-2);
+  min-height: var(--control-height-md);
+  padding: 0 var(--control-padding-x);
+  background: var(--color-background-primary);
+  color: var(--color-label-primary);
+  border: 1px solid var(--color-border-control);
+  border-radius: var(--radius-control);
+  font-family: var(--font-text); font-size: 14px; line-height: 20px;
+  transition: border-color var(--duration-instant) var(--easing-standard), box-shadow var(--duration-quick) var(--easing-standard);
+}
+.ek-box-input:hover { border-color: var(--color-border-control-hover); }
+/* Focus: accent border plus a soft halo */
+.ek-box-input:focus-within { border-color: var(--color-border-focus); box-shadow: 0 0 0 3px var(--color-accent-subtle-hover); }
+.ek-box-input[data-invalid] { border-color: var(--color-border-invalid); }
+.ek-box-input[data-invalid]:focus-within { box-shadow: 0 0 0 3px var(--color-danger-subtle-hover); }
+.ek-box-input[data-disabled] { opacity: 0.4; cursor: not-allowed; }
+.ek-box-input > .ek-icon { flex: none; color: var(--color-label-secondary); }
+.ek-box-input__native {
+  flex: 1; min-width: 0; align-self: stretch;
+  border: 0; padding: 0; margin: 0; background: transparent; color: inherit; font: inherit; outline: none;
+}
+.ek-box-input__native::placeholder { color: var(--color-label-tertiary); opacity: 1; }
+.ek-box-input__native:disabled { cursor: not-allowed; }
+@media (prefers-reduced-motion: reduce) { .ek-box-input { transition: none; } }

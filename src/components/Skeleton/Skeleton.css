@@ -1,0 +1,9 @@
+.ek-skeleton { display: block; background: var(--color-fill-tertiary); border-radius: var(--radius-sm); position: relative; overflow: hidden; }
+.ek-skeleton--text { height: 12px; margin: 4px 0; border-radius: 999px; width: 100%; }
+.ek-skeleton--rect { width: 100%; height: 120px; border-radius: var(--radius-container); }
+.ek-skeleton--circle { width: 32px; aspect-ratio: 1; border-radius: 999px; }
+.ek-skeleton-lines { display: grid; gap: 4px; }
+/* A soft shimmer, like a sheen passing over (off when reduce motion is on). */
+.ek-skeleton::after { content: ''; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, var(--color-fill-quaternary), transparent); animation: ek-shimmer 1.4s var(--easing-standard) infinite; }
+@keyframes ek-shimmer { to { transform: translateX(100%); } }
+@media (prefers-reduced-motion: reduce) { .ek-skeleton::after { animation: none; display: none; } }

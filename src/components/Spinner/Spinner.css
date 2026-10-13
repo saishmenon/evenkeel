@@ -1,0 +1,8 @@
+.ek-spinner { position: relative; display: inline-block; flex: none; color: currentColor; }
+.ek-spinner > span {
+  position: absolute; left: calc(50% - 6.5%); top: 0; width: 13%; height: 30%;
+  border-radius: 999px; background: currentColor; transform-origin: 50% 166%;
+  opacity: 0.25; animation: ek-spoke 800ms linear infinite;
+}
+@keyframes ek-spoke { 0% { opacity: 1; } 100% { opacity: 0.25; } }
+@media (prefers-reduced-motion: reduce) { .ek-spinner > span { animation-duration: 2400ms; } }

@@ -1,0 +1,52 @@
+name: Component request
+description: Propose a new component for both Figma and React.
+title: "[Component] "
+labels: ["component-request", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every Evenkeel component exists in Figma **and** React with the same name, variants and docs.
+        Before requesting, check whether an existing component or pattern already covers the job.
+  - type: input
+    id: name
+    attributes:
+      label: Component name
+      placeholder: e.g. Date range picker
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: What job does it do?
+      description: The user problem, and the screens or flows that need it (e.g. a payouts report, a webhook log).
+    validations:
+      required: true
+  - type: textarea
+    id: why-not-existing
+    attributes:
+      label: Why existing components aren't enough
+    validations:
+      required: true
+  - type: textarea
+    id: anatomy
+    attributes:
+      label: Anatomy, variants and states
+      description: Parts, sizes, variants, states (hover, focus, disabled, error, loading, empty).
+  - type: textarea
+    id: a11y
+    attributes:
+      label: Accessibility
+      description: Keyboard interaction, ARIA pattern (link to the WAI-ARIA APG if one applies), announcements.
+  - type: textarea
+    id: prior-art
+    attributes:
+      label: Prior art
+      description: Links or screenshots of good examples.
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I can help with the React side
+        - label: I can help with the Figma side

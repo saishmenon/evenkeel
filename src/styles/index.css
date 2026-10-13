@@ -1,0 +1,16 @@
+/* The one stylesheet an app imports. */
+/* Inter with optical sizes: small text opens up, large headings tighten. */
+@import '@fontsource-variable/inter/opsz.css';
+@import '@fontsource-variable/bricolage-grotesque';
+@import '../../build/css/evenkeel.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; font-optical-sizing: auto; }
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--color-label-primary);
+  background: var(--color-background-primary);
+}

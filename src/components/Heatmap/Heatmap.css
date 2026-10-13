@@ -1,0 +1,16 @@
+.ek-heatmap { margin: 0; display: grid; gap: var(--space-3); font-family: var(--font-text); font-size: 12px; line-height: 16px; color: var(--color-label-secondary); }
+.ek-heatmap__grid { display: grid; gap: 3px; align-items: center; }
+.ek-heatmap__rowlabel { padding-right: var(--space-2); white-space: nowrap; }
+.ek-heatmap__collabel { text-align: center; white-space: nowrap; overflow: visible; }
+.ek-heatmap__cell { display: block; aspect-ratio: 1; min-width: 10px; border-radius: 3px; background: var(--color-fill-quaternary); }
+/* Six steps built from accent roles, so they work in every theme and mode (and match Figma). */
+.ek-heatmap__cell[data-level='0'] { background: var(--color-fill-quaternary); }
+.ek-heatmap__cell[data-level='1'] { background: var(--color-accent-subtle); }
+.ek-heatmap__cell[data-level='2'] { background: var(--color-accent-subtle-hover); }
+.ek-heatmap__cell[data-level='3'] { background: var(--color-accent-border); }
+.ek-heatmap__cell[data-level='4'] { background: var(--color-accent-solid); opacity: 0.7; }
+.ek-heatmap__cell[data-level='5'] { background: var(--color-accent-solid); }
+.ek-heatmap__legend { display: flex; align-items: center; gap: 3px; justify-content: flex-end; }
+.ek-heatmap__legend .ek-heatmap__cell { width: 12px; }
+.ek-heatmap__legend > span:first-child { margin-right: var(--space-1); }
+.ek-heatmap__legend > span:last-child { margin-left: var(--space-1); }

@@ -1,0 +1,10 @@
+.ek-pagination { display: inline-flex; align-items: center; gap: var(--space-1); font-family: var(--font-text); }
+.ek-pagination ul { display: flex; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.ek-pagination__page {
+  min-width: var(--control-height-sm); height: var(--control-height-sm); padding: 0 var(--space-1_5);
+  border: 0; border-radius: var(--radius-control); background: transparent;
+  color: var(--color-label-primary); font: inherit; font-size: 13px; line-height: 18px; font-variant-numeric: tabular-nums; cursor: pointer;
+}
+.ek-pagination__page:hover { background: var(--color-fill-quaternary); }
+.ek-pagination__page[aria-current='page'] { background: var(--color-accent-subtle); color: var(--color-label-link); font-weight: 500; }
+.ek-pagination__gap { display: inline-grid; place-items: center; min-width: 24px; height: var(--control-height-sm); color: var(--color-label-secondary); font-size: 13px; }

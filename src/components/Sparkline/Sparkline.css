@@ -1,0 +1,4 @@
+.ek-sparkline { display: inline-block; vertical-align: middle; overflow: visible; }
+.ek-sparkline__line { fill: none; stroke: var(--ek-tone); stroke-width: 1.75; stroke-linejoin: round; stroke-linecap: round; }
+.ek-sparkline__area { fill: var(--ek-tone); opacity: 0.14; }
+.ek-sparkline__dot { fill: var(--ek-tone); }

@@ -1,0 +1,6 @@
+.ek-select { position: relative; }
+.ek-select .ek-box-input__native { appearance: none; cursor: pointer; padding-right: calc(16px + var(--space-2)); }
+.ek-select > .ek-icon { position: absolute; right: var(--control-padding-x); pointer-events: none; }
+/* In a select the placeholder is real content (not a placeholder attribute), so it must pass AA: secondary, not tertiary. */
+.ek-select .ek-box-input__native:has(option[value='']:checked) { color: var(--color-label-secondary); }
+.ek-select option { color: var(--color-label-primary); background: var(--color-background-elevated); }

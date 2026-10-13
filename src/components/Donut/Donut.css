@@ -1,0 +1,11 @@
+.ek-donut { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-6); font-family: var(--font-text); }
+.ek-donut__ring { position: relative; flex: none; }
+.ek-donut__ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ek-donut__track { fill: none; stroke: var(--color-fill-quaternary); stroke-width: 12; }
+.ek-donut__seg { fill: none; stroke: var(--ek-tone); stroke-width: 12; transition: stroke-width var(--duration-quick) var(--easing-standard); }
+.ek-donut__seg:hover { stroke-width: 14; }
+.ek-donut__center { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
+.ek-donut__value { font-family: var(--font-display); font-size: 22px; line-height: 28px; font-weight: 600; color: var(--color-label-primary); font-variant-numeric: tabular-nums; }
+.ek-donut__label { font-size: 12px; line-height: 16px; color: var(--color-label-secondary); }
+.ek-donut__legend { flex-direction: column; flex-wrap: nowrap; }
+.ek-donut__legend .ek-viz-value { margin-left: auto; padding-left: var(--space-4); }

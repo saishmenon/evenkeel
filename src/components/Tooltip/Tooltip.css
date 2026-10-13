@@ -1,0 +1,10 @@
+.ek-tooltip {
+  position: absolute; z-index: 50; left: 50%; bottom: calc(100% + var(--space-1_5)); transform: translateX(-50%);
+  width: max-content; max-width: 240px; padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm); background: var(--color-label-primary); color: var(--color-background-primary);
+  font-family: var(--font-text); font-size: 12px; line-height: 16px; font-weight: 500; text-align: center;
+  pointer-events: none; opacity: 0; visibility: hidden;
+  transition: opacity var(--duration-quick) var(--easing-standard), visibility 0s linear var(--duration-quick);
+}
+.ek-tooltip[data-side='bottom'] { bottom: auto; top: calc(100% + var(--space-1_5)); }
+.ek-tooltip[data-open] { opacity: 1; visibility: visible; transition-delay: 0s; }

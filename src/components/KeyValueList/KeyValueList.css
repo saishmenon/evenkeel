@@ -1,0 +1,8 @@
+.ek-kv { display: grid; gap: var(--space-4) var(--space-6); margin: 0; font-family: var(--font-text); }
+.ek-kv__pair { display: grid; gap: 2px; min-width: 0; }
+.ek-kv__label { color: var(--color-label-secondary); font-size: 13px; line-height: 18px; }
+.ek-kv__value { margin: 0; color: var(--color-label-primary); font-size: 14px; line-height: 20px; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.ek-kv--inline { gap: 0; }
+.ek-kv--inline .ek-kv__pair { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: var(--space-3); padding: var(--space-2) 0; border-bottom: 1px solid var(--color-separator-default); }
+.ek-kv--inline .ek-kv__pair:last-child { border-bottom: 0; }
+.ek-kv--inline .ek-kv__value { text-align: right; }

@@ -1,0 +1,13 @@
+/* Shared by Popover, Menu, Combo box and Tooltip: an anchor and a floating panel below (or above) it. */
+.ek-anchor { position: relative; display: inline-flex; }
+.ek-floating {
+  position: absolute; z-index: 40; top: calc(100% + var(--space-1_5)); left: 0;
+  min-width: 100%; background: var(--color-background-elevated); color: var(--color-label-primary);
+  border-radius: var(--radius-container); box-shadow: 0 0 0 1px var(--color-separator-default), var(--elevation-2);
+  font-family: var(--font-text); font-size: 14px; line-height: 20px;
+  transform-origin: top left; animation: ek-pop-in var(--duration-quick) var(--easing-enter);
+}
+.ek-floating[data-align='end'] { left: auto; right: 0; transform-origin: top right; }
+.ek-floating[data-side='top'] { top: auto; bottom: calc(100% + var(--space-1_5)); transform-origin: bottom left; }
+@keyframes ek-pop-in { from { opacity: 0; transform: scale(0.96) translateY(-2px); } }
+@media (prefers-reduced-motion: reduce) { .ek-floating { animation: none; } }

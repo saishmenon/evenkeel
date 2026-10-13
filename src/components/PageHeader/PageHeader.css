@@ -1,0 +1,11 @@
+.ek-pageheader { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--space-3) var(--space-6); font-family: var(--font-text); color: var(--color-label-primary); }
+.ek-pageheader__text { display: grid; gap: var(--space-1); min-width: 0; flex: 1 1 320px; }
+.ek-pageheader__titleline { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2) var(--space-3); }
+.ek-pageheader__title { margin: 0; font-family: var(--font-display); }
+.ek-pageheader--1 .ek-pageheader__title { font-size: 34px; line-height: 40px; font-weight: 700; letter-spacing: -0.02em; }
+.ek-pageheader--2 .ek-pageheader__title { font-size: 22px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em; }
+.ek-pageheader--3 .ek-pageheader__title { font-family: var(--font-text); font-size: 15px; line-height: 22px; font-weight: 600; }
+.ek-pageheader__counter { color: var(--color-label-secondary); font-variant-numeric: tabular-nums; }
+.ek-pageheader__desc { margin: 0; max-width: 72ch; color: var(--color-label-secondary); font-size: 15px; line-height: 22px; }
+.ek-pageheader--2 .ek-pageheader__desc, .ek-pageheader--3 .ek-pageheader__desc { font-size: 13px; line-height: 18px; }
+.ek-pageheader__actions { display: flex; flex-wrap: wrap; gap: var(--control-gap); }

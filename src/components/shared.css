@@ -1,0 +1,13 @@
+/*
+ * Behaviour shared by every Evenkeel control.
+ * Controls dim when disabled (they never turn grey), and respond to touch
+ * by darkening slightly. Focus is a clear 2px ring for keyboard users only.
+ */
+.ek-control { -webkit-tap-highlight-color: transparent; transition: background-color var(--duration-instant) var(--easing-standard), border-color var(--duration-instant) var(--easing-standard), opacity var(--duration-instant) var(--easing-standard), box-shadow var(--duration-quick) var(--easing-standard); }
+.ek-control:focus-visible { outline: 2px solid var(--color-border-focus); outline-offset: 2px; }
+.ek-control:active:not(:disabled):not([aria-disabled='true']) { opacity: 0.85; }
+.ek-control:disabled, .ek-control[aria-disabled='true'], .ek-disabled { opacity: 0.4; cursor: not-allowed; }
+@media (prefers-reduced-motion: reduce) { .ek-control { transition: none; } }
+
+/* Visually hidden, still announced by screen readers */
+.ek-sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }

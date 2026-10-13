@@ -1,0 +1,17 @@
+.ek-slider { display: grid; gap: var(--field-gap); font-family: var(--font-text); }
+.ek-slider[data-disabled] .ek-slider__input { opacity: 0.4; } /* like fields: the control dims, the label stays readable */
+.ek-slider__top { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-2); }
+.ek-slider__label { font-size: 14px; line-height: 20px; font-weight: 500; color: var(--color-label-primary); }
+.ek-slider__value { font-size: 14px; line-height: 20px; color: var(--color-label-secondary); font-variant-numeric: tabular-nums; }
+.ek-slider__hint { margin: 0; font-size: 12px; line-height: 16px; color: var(--color-label-secondary); }
+/* Track: filled part in accent, rest in the off-track colour (3:1 visible). Knob: white with a shadow. */
+.ek-slider__input { -webkit-appearance: none; appearance: none; width: 100%; height: 24px; margin: 0; background: transparent; cursor: pointer; }
+.ek-slider__input:disabled { cursor: not-allowed; }
+.ek-slider__input::-webkit-slider-runnable-track { height: 4px; border-radius: 999px; background: linear-gradient(to right, var(--color-accent-solid) var(--ek-fill), var(--color-control-track-off) var(--ek-fill)); }
+.ek-slider__input::-moz-range-track { height: 4px; border-radius: 999px; background: var(--color-control-track-off); }
+.ek-slider__input::-moz-range-progress { height: 4px; border-radius: 999px; background: var(--color-accent-solid); }
+.ek-slider__input::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; margin-top: -8px; border-radius: 999px; background: var(--color-control-knob); box-shadow: 0 0 0 0.5px rgb(0 0 0 / 0.12), 0 2px 6px rgb(0 0 0 / 0.2); }
+.ek-slider__input::-moz-range-thumb { width: 20px; height: 20px; border: 0; border-radius: 999px; background: var(--color-control-knob); box-shadow: 0 0 0 0.5px rgb(0 0 0 / 0.12), 0 2px 6px rgb(0 0 0 / 0.2); }
+.ek-slider__input:focus-visible { outline: none; }
+.ek-slider__input:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 2px var(--color-background-primary), 0 0 0 4px var(--color-border-focus); }
+.ek-slider__input:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 2px var(--color-background-primary), 0 0 0 4px var(--color-border-focus); }

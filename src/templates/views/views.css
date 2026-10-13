@@ -1,0 +1,11 @@
+/* Cell helpers for the Mintline data views (mintline.tsx). Tokens only. */
+.vw-muted { color: var(--color-label-secondary); }
+.vw-mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 13px; }
+.vw-num { font-variant-numeric: tabular-nums; }
+.vw-strong { font-weight: 600; }
+.vw-person { display: inline-flex; align-items: center; gap: var(--space-2); min-width: 0; }
+.vw-growth { font-variant-numeric: tabular-nums; }
+.vw-growth[data-dir='up'] { color: var(--color-success-text); }
+.vw-growth[data-dir='down'] { color: var(--color-danger-text); }
+.vw-growth[data-dir='up']::before { content: '▲ '; font-size: 9px; vertical-align: 1px; }
+.vw-growth[data-dir='down']::before { content: '▼ '; font-size: 9px; vertical-align: 1px; }

@@ -1,0 +1,12 @@
+/* Layout helpers used only by the demos. Real apps would use their own grid. */
+.demo-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-6); }
+.demo-grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: var(--space-4); }
+.demo-grid-2--wide-left { grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr); }
+@media (max-width: 899px) { .demo-grid-2--wide-left { grid-template-columns: 1fr; } }
+.demo-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: var(--space-4); }
+.demo-activity { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
+.demo-activity li { display: flex; gap: var(--space-3); align-items: flex-start; }
+.demo-activity strong { font-weight: 500; }
+.demo-muted { color: var(--color-label-secondary); font-size: 13px; line-height: 18px; }
+.demo-stack { display: grid; gap: var(--section-gap); }
+.demo-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }

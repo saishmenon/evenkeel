@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationMap": false,
+    "rootDir": "src",
+    "outDir": "dist/types"
+  },
+  "include": ["src/index.ts", "src/icons/icons.ts", "src/illustrations/index.ts", "src/illustrations/index.tsx", "src/vite-env.d.ts"],
+  "exclude": ["**/*.stories.tsx", "**/*.mdx", "node_modules", "dist", "storybook-static"]
+}

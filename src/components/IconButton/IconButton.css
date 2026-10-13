@@ -1,0 +1,6 @@
+/* Square: width = height, so it lines up with buttons of the same size */
+.ek-icon-button { padding: 0; aspect-ratio: 1; width: var(--control-height-md); }
+.ek-icon-button.ek-button--sm { width: var(--control-height-sm); padding: 0; }
+.ek-icon-button.ek-button--lg { width: var(--control-height-lg); padding: 0; }
+.ek-icon-button.ek-button--plain { color: var(--color-label-secondary); }
+.ek-icon-button.ek-button--plain:hover:not(:disabled) { color: var(--color-label-primary); background: var(--color-fill-tertiary); }

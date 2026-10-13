@@ -1,0 +1,13 @@
+.ek-progress { display: grid; gap: var(--space-1_5); font-family: var(--font-text); }
+.ek-progress__top { display: flex; justify-content: space-between; gap: var(--space-2); }
+.ek-progress__label { font-size: 14px; line-height: 20px; font-weight: 500; color: var(--color-label-primary); }
+.ek-progress__value { font-size: 14px; line-height: 20px; color: var(--color-label-secondary); font-variant-numeric: tabular-nums; }
+.ek-progress__desc { font-size: 12px; line-height: 16px; color: var(--color-label-secondary); }
+.ek-progress__track { position: relative; height: 6px; border-radius: 999px; background: var(--color-fill-tertiary); overflow: hidden; }
+.ek-progress__fill { height: 100%; border-radius: inherit; transition: width var(--duration-standard) var(--easing-standard); }
+.ek-progress__fill--accent { background: var(--color-accent-solid); }
+.ek-progress__fill--success { background: var(--color-success-solid); }
+.ek-progress__fill--danger { background: var(--color-danger-solid); }
+.ek-progress__track--indeterminate .ek-progress__fill { position: absolute; width: 35%; animation: ek-indeterminate 1.4s var(--easing-standard) infinite; }
+@keyframes ek-indeterminate { 0% { left: -35%; } 100% { left: 100%; } }
+@media (prefers-reduced-motion: reduce) { .ek-progress__track--indeterminate .ek-progress__fill { animation: none; left: 0; width: 100%; opacity: 0.5; } }

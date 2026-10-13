@@ -1,0 +1,7 @@
+.ek-link { color: var(--color-label-link); text-underline-offset: 3px; text-decoration-thickness: 1px; border-radius: 2px; cursor: pointer; }
+.ek-link--inline { text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
+.ek-link--inline:hover { text-decoration-color: currentColor; }
+.ek-link--standalone { display: inline-flex; align-items: center; gap: var(--space-1); text-decoration: none; font-weight: 500; }
+.ek-link--standalone:hover { text-decoration: underline; }
+.ek-link__icon { display: inline-block; vertical-align: -2px; margin-left: 2px; }
+.ek-link:active { opacity: 0.85; }

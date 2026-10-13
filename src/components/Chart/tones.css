@@ -1,0 +1,44 @@
+/* Chart colours: every chart reads --ek-tone from data-tone. Roles only, so every theme and mode works. */
+.ek-viz [data-tone='accent'], .ek-viz[data-tone='accent'] { --ek-tone: var(--color-accent-solid); }
+.ek-viz [data-tone='neutral'], .ek-viz[data-tone='neutral'] { --ek-tone: var(--color-label-tertiary); }
+.ek-viz [data-tone='success'], .ek-viz[data-tone='success'] { --ek-tone: var(--color-success-solid); }
+.ek-viz [data-tone='warning'], .ek-viz[data-tone='warning'] { --ek-tone: var(--color-warning-solid); }
+.ek-viz [data-tone='danger'], .ek-viz[data-tone='danger'] { --ek-tone: var(--color-danger-solid); }
+.ek-viz [data-tone='info'], .ek-viz[data-tone='info'] { --ek-tone: var(--color-info-solid); }
+.ek-viz-legend { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin: 0; padding: 0; list-style: none; font-family: var(--font-text); font-size: 13px; line-height: 18px; color: var(--color-label-primary); }
+.ek-viz-legend li { display: inline-flex; align-items: center; gap: var(--space-1_5); }
+.ek-viz-legend .ek-viz-swatch { width: 10px; height: 10px; border-radius: 3px; background: var(--ek-tone); flex: none; }
+.ek-viz-legend .ek-viz-value { color: var(--color-label-secondary); font-variant-numeric: tabular-nums; }
+
+/* Opt-in data-viz palette: palette="categorical" on Chart / Donut / BarList.
+   Series without an explicit tone get data-series="N" → --ek-viz-cat-N (build/css/palettes.css).
+   Higher specificity than the tone rules above, so defaults are untouched when the prop is absent. */
+.ek-viz[data-palette='categorical'] [data-series='1'] { --ek-tone: var(--ek-viz-cat-1); }
+.ek-viz[data-palette='categorical'] [data-series='2'] { --ek-tone: var(--ek-viz-cat-2); }
+.ek-viz[data-palette='categorical'] [data-series='3'] { --ek-tone: var(--ek-viz-cat-3); }
+.ek-viz[data-palette='categorical'] [data-series='4'] { --ek-tone: var(--ek-viz-cat-4); }
+.ek-viz[data-palette='categorical'] [data-series='5'] { --ek-tone: var(--ek-viz-cat-5); }
+.ek-viz[data-palette='categorical'] [data-series='6'] { --ek-tone: var(--ek-viz-cat-6); }
+.ek-viz[data-palette='categorical'] [data-series='7'] { --ek-tone: var(--ek-viz-cat-7); }
+.ek-viz[data-palette='categorical'] [data-series='8'] { --ek-tone: var(--ek-viz-cat-8); }
+.ek-viz[data-palette='categorical'] [data-series='9'] { --ek-tone: var(--ek-viz-cat-9); }
+.ek-viz[data-palette='categorical'] [data-series='10'] { --ek-tone: var(--ek-viz-cat-10); }
+.ek-viz[data-palette='categorical'] [data-series='11'] { --ek-tone: var(--ek-viz-cat-11); }
+.ek-viz[data-palette='categorical'] [data-series='12'] { --ek-tone: var(--ek-viz-cat-12); }
+
+/* Opt-in sequential ramps for Heatmap: palette="blue" | "green" | "purple". Level 0 stays the quiet fill. */
+.ek-heatmap[data-palette='blue'] .ek-heatmap__cell[data-level='1'] { background: var(--ek-viz-seq-blue-2); }
+.ek-heatmap[data-palette='blue'] .ek-heatmap__cell[data-level='2'] { background: var(--ek-viz-seq-blue-4); }
+.ek-heatmap[data-palette='blue'] .ek-heatmap__cell[data-level='3'] { background: var(--ek-viz-seq-blue-6); }
+.ek-heatmap[data-palette='blue'] .ek-heatmap__cell[data-level='4'] { background: var(--ek-viz-seq-blue-8); opacity: 1; }
+.ek-heatmap[data-palette='blue'] .ek-heatmap__cell[data-level='5'] { background: var(--ek-viz-seq-blue-9); }
+.ek-heatmap[data-palette='green'] .ek-heatmap__cell[data-level='1'] { background: var(--ek-viz-seq-green-2); }
+.ek-heatmap[data-palette='green'] .ek-heatmap__cell[data-level='2'] { background: var(--ek-viz-seq-green-4); }
+.ek-heatmap[data-palette='green'] .ek-heatmap__cell[data-level='3'] { background: var(--ek-viz-seq-green-6); }
+.ek-heatmap[data-palette='green'] .ek-heatmap__cell[data-level='4'] { background: var(--ek-viz-seq-green-8); opacity: 1; }
+.ek-heatmap[data-palette='green'] .ek-heatmap__cell[data-level='5'] { background: var(--ek-viz-seq-green-9); }
+.ek-heatmap[data-palette='purple'] .ek-heatmap__cell[data-level='1'] { background: var(--ek-viz-seq-purple-2); }
+.ek-heatmap[data-palette='purple'] .ek-heatmap__cell[data-level='2'] { background: var(--ek-viz-seq-purple-4); }
+.ek-heatmap[data-palette='purple'] .ek-heatmap__cell[data-level='3'] { background: var(--ek-viz-seq-purple-6); }
+.ek-heatmap[data-palette='purple'] .ek-heatmap__cell[data-level='4'] { background: var(--ek-viz-seq-purple-8); opacity: 1; }
+.ek-heatmap[data-palette='purple'] .ek-heatmap__cell[data-level='5'] { background: var(--ek-viz-seq-purple-9); }

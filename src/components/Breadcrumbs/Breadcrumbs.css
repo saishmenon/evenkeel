@@ -1,0 +1,6 @@
+.ek-crumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1); margin: 0; padding: 0; list-style: none; font-family: var(--font-text); font-size: 13px; line-height: 18px; }
+.ek-crumbs li { display: inline-flex; align-items: center; gap: var(--space-1); min-width: 0; }
+.ek-crumbs__link { color: var(--color-label-link); text-decoration: none; border-radius: var(--radius-xs); }
+.ek-crumbs__link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.ek-crumbs__current { color: var(--color-label-secondary); }
+.ek-crumbs__sep { color: var(--color-label-tertiary); }

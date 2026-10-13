@@ -1,0 +1,57 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+<div className="doc">
+
+# Evenkeel
+
+**Calm interfaces for dense data.**
+A themeable design system for data-heavy web apps, in Figma and React.
+Evenkeel lives in Figma and React at the same time. Every token, style and component has the same name in both.
+
+## Start here
+
+- **New?** Read the principles below, then open **Flows › 1.1 · Sign up and set up** and click through.
+- **The story:** every screen follows Lantern Bikes, an online bike shop, through the week it moves its payments to Mintline (5–9 October). Same people, amounts and dates everywhere.
+- **Order to explore:** Foundations → Components → Templates → Flows → Demos.
+- **Full walkthrough:** `START_HERE.md` in the repo.
+
+## Principles
+
+Three ideas shape every decision, plus two that data-heavy web apps need.
+
+1. **Clarity.** The most important thing on screen should be obvious at a glance. Size, weight and colour point the way, and the same job always looks and behaves the same way, in every theme and every density.
+2. **Restraint.** The interface stays quiet so the content can lead. Borders give way to tinted fills, the accent is saved for the next action, and shapes, type and motion share one rhythm: concentric corners, a 4-point grid, one gentle spring.
+3. **Depth.** Layers show what sits on top of what. Sheets for focused tasks, an inspector for details, popovers for quick explanations, and frosted materials that keep people oriented.
+4. **Calm density.** Data-heavy screens can be dense without being cramped. Compact density changes spacing, never readability.
+5. **Accessible by default.** Every colour pairing is checked against WCAG AA in every theme and mode, automatically. Keyboard and screen readers work without extra code.
+
+## How it fits together
+
+| Layer | What it is | Where |
+|---|---|---|
+| Theme | Five knobs: accent, neutrals, shape, display font, (+ density and mode) | `src/theme/presets.ts` · Figma **Theme** collection |
+| Scales | 12-step colour scales generated from the knobs | `src/theme/engine.ts` · Figma **Primitives** |
+| Roles | Colours named by job: label, fill, background… | `src/theme/roles.ts` · Figma **Color** collection |
+| Foundations | Type, spacing, density, shape, depth, materials, motion | `src/tokens/foundations.ts` · Figma **Size**, **Density**, text and effect styles |
+| Components | 48 components plus 31 AI components, same names and variants as Figma | `src/components` · Figma component pages |
+| Templates and flows | Page templates and click-through flows that tell one story, a week at Lantern Bikes | Storybook **Templates** and **Flows** · Figma **Templates** and **User flows** |
+
+## Using it
+
+```html
+<link rel="stylesheet" href="evenkeel.css" />
+<html data-theme="default" data-mode="dark" data-density="compact">
+```
+
+Custom theme in one call:
+
+```js
+applyTheme(document.documentElement, {
+  accent: { light: '#FF5A1F' }, neutral: 'sand', shape: 'round',
+  displayFont: 'Bricolage Grotesque', textFont: 'Inter',
+});
+```
+
+</div>

@@ -1,0 +1,43 @@
+name: Figma library issue
+description: Something in the Figma Community file is wrong, missing or out of sync with code.
+title: "[Figma] "
+labels: ["figma", "triage"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of issue
+      options:
+        - Figma and code don't match (name, variant, value)
+        - Variable or style is missing / broken
+        - Component layout or auto layout bug
+        - Missing font or unresolved library link
+        - Docs page is wrong or unclear
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Page, component or variable
+      placeholder: e.g. Table › Table cell, Color › label/secondary
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What's wrong?
+      description: Screenshots help. If it's a mismatch, say what the code (Storybook) shows.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Figma file version
+      description: Shown on the Cover page and in the Community file's version history.
+      placeholder: "1.0.0"
+  - type: input
+    id: link
+    attributes:
+      label: Link to the node (optional)
+      description: Right-click › Copy link to selection, from your duplicate of the file.

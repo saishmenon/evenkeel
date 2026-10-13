@@ -1,0 +1,41 @@
+/* The <dialog> fills the screen (so a click outside lands on it); the panel is the visible sheet. */
+.ek-sheet {
+  max-width: none; max-height: none; width: 100%; height: 100%; margin: 0; padding: var(--space-6);
+  border: 0; background: transparent; display: none; align-items: center; justify-content: center;
+  font-family: var(--font-text); color: var(--color-label-primary);
+}
+.ek-sheet[open] { display: flex; }
+.ek-sheet::backdrop { background: var(--color-overlay-scrim); }
+.ek-sheet__panel {
+  display: flex; flex-direction: column; width: 100%; max-height: min(86dvh, 860px);
+  background: var(--color-background-elevated); border-radius: var(--radius-panel); box-shadow: var(--elevation-3);
+  overflow: hidden;
+}
+.ek-sheet--sm .ek-sheet__panel { max-width: 420px; }
+.ek-sheet--md .ek-sheet__panel { max-width: 560px; }
+.ek-sheet--lg .ek-sheet__panel { max-width: 760px; }
+.ek-sheet__header { display: flex; align-items: flex-start; gap: var(--space-4); padding: var(--space-6) var(--space-6) var(--space-2); }
+.ek-sheet__titles { flex: 1; display: grid; gap: var(--space-1); min-width: 0; }
+.ek-sheet__title { margin: 0; font-family: var(--font-display); font-size: 20px; line-height: 25px; font-weight: 600; letter-spacing: -0.01em; }
+.ek-sheet__desc { margin: 0; color: var(--color-label-secondary); font-size: 14px; line-height: 20px; }
+.ek-sheet__close { border-radius: 999px; margin: -2px -4px 0 0; }
+.ek-sheet__body { flex: 1; min-height: 0; overflow: auto; padding: var(--space-4) var(--space-6) var(--space-6); display: grid; gap: var(--space-4); align-content: start; font-size: 14px; line-height: 20px; }
+.ek-sheet__footer { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: var(--control-gap); padding: var(--space-4) var(--space-6); border-top: 1px solid var(--color-separator-default); }
+
+/* Motion: rises with Evenkeel's spring, fades its scrim. */
+.ek-sheet[open] .ek-sheet__panel { animation: ek-sheet-in var(--duration-slow) var(--easing-spring); }
+.ek-sheet[open]::backdrop { animation: ek-sheet-fade var(--duration-standard) var(--easing-standard); }
+@keyframes ek-sheet-in { from { opacity: 0; transform: translateY(16px) scale(0.97); } }
+@keyframes ek-sheet-fade { from { opacity: 0; } }
+
+/* Narrow screens: a bottom sheet, like on a phone. */
+@media (max-width: 599px) {
+  .ek-sheet { padding: var(--space-6) 0 0; align-items: flex-end; }
+  .ek-sheet__panel { max-width: none !important; max-height: 92dvh; border-radius: var(--radius-panel) var(--radius-panel) 0 0; }
+  .ek-sheet[open] .ek-sheet__panel { animation-name: ek-sheet-up; }
+  .ek-sheet__footer > * { flex: 1; }
+  @keyframes ek-sheet-up { from { transform: translateY(100%); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ek-sheet[open] .ek-sheet__panel { animation: ek-sheet-fade var(--duration-quick) linear; }
+}

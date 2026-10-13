@@ -1,0 +1,45 @@
+/* Styles for documentation pages only. Built from Evenkeel tokens, so docs re-theme too. */
+.doc { font-family: var(--font-text); color: var(--color-label-primary); max-width: 1100px; }
+.doc h1 { margin: 0 0 var(--space-2); }
+.doc h2 { margin: var(--space-10) 0 var(--space-1); }
+.doc .lede { color: var(--color-label-secondary); margin: 0 0 var(--space-6); max-width: 680px; }
+.doc .muted { color: var(--color-label-secondary); }
+.doc code, .doc .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px; }
+.doc-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.doc-row { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: flex-start; }
+
+/* swatch */
+.doc-swatch { border-radius: var(--radius-container); border: 1px solid var(--color-separator-default); overflow: hidden; background: var(--color-background-primary); }
+.doc-swatch__chip { height: 64px; border-bottom: 1px solid var(--color-separator-default); display: grid; place-items: center; }
+.doc-swatch__body { padding: var(--space-3); display: grid; gap: 2px; }
+.doc-swatch__checker { background-image: conic-gradient(var(--color-fill-tertiary) 25%, transparent 0 50%, var(--color-fill-tertiary) 0 75%, transparent 0); background-size: 12px 12px; }
+
+/* scale strip */
+.doc-scale { display: grid; grid-template-columns: 90px repeat(12, 1fr); gap: 4px; align-items: center; }
+.doc-scale > div { height: 36px; border-radius: 6px; }
+.doc-scale > span { font-size: 12px; color: var(--color-label-secondary); }
+
+/* panel */
+.doc-panel { background: var(--color-background-primary); color: var(--color-label-primary); border: 1px solid var(--color-separator-default); border-radius: var(--radius-panel); padding: var(--space-6); }
+
+/* ---- Mini UI: a token-only sample screen used on the theming pages ---- */
+.mini { display: grid; gap: var(--section-gap); padding: var(--container-padding); background: var(--color-background-grouped); color: var(--color-label-primary); border-radius: var(--radius-panel); font-family: var(--font-text); }
+.mini-card { background: var(--color-background-grouped-item); border-radius: var(--radius-container); padding: var(--container-padding); display: grid; gap: var(--space-4); box-shadow: var(--elevation-1); }
+.mini-row { display: flex; gap: var(--control-gap); align-items: center; flex-wrap: wrap; }
+.mini-btn { height: var(--control-height-md); padding: 0 var(--control-padding-x); border-radius: var(--radius-control); border: 0; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; }
+.mini-btn--primary { background: var(--color-accent-solid); color: var(--color-label-on-accent); }
+.mini-btn--primary:hover { background: var(--color-accent-solid-hover); }
+.mini-btn--secondary { background: var(--color-fill-tertiary); color: var(--color-label-primary); }
+.mini-btn--secondary:hover { background: var(--color-fill-secondary); }
+.mini-field { display: grid; gap: var(--field-gap); }
+.mini-field label { font-size: 14px; font-weight: 500; }
+.mini-input { height: var(--control-height-md); padding: 0 var(--control-padding-x); border-radius: var(--radius-control); border: 1px solid var(--color-border-control); background: var(--color-background-primary); color: var(--color-label-primary); font: inherit; font-size: 14px; display: flex; align-items: center; }
+.mini-seg { display: inline-flex; padding: 2px; gap: 2px; background: var(--color-fill-tertiary); border-radius: calc(var(--radius-control) + 2px); }
+.mini-seg span { padding: 4px 12px; border-radius: var(--radius-control); font-size: 13px; font-weight: 500; color: var(--color-label-secondary); }
+.mini-seg span[aria-current] { background: var(--color-background-elevated); color: var(--color-label-primary); box-shadow: var(--elevation-1); }
+.mini-toggle { width: 38px; height: 22px; border-radius: 999px; background: var(--color-accent-solid); position: relative; flex: none; }
+.mini-toggle::after { content: ''; position: absolute; top: 2px; right: 2px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.3); }
+.mini-badge { font-size: 12px; font-weight: 500; padding: 2px 8px; border-radius: 999px; }
+.mini-list { border-radius: var(--radius-container); overflow: hidden; background: var(--color-background-grouped-item); }
+.mini-list > div { min-height: var(--row-height); display: flex; align-items: center; justify-content: space-between; padding: 0 var(--container-padding); border-bottom: 1px solid var(--color-separator-default); font-size: 14px; }
+.mini-list > div:last-child { border-bottom: 0; }

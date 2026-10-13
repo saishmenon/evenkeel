@@ -1,0 +1,25 @@
+// Evenkeel AI components: one import for the whole set.
+export { AIBadge, type AIBadgeProps } from './AIBadge';
+export { PromptInput, defaultModels, defaultCommands, defaultMentions, type PromptInputProps, type PromptAttachment, type PromptCommand, type PromptMention, type PromptModel, type PromptSubmit } from './PromptInput';
+export { Message, type MessageProps } from './Message';
+export { StreamingText, useSimulatedStream, type StreamingTextProps } from './StreamingText';
+export { MessageActions, type MessageActionsProps } from './MessageActions';
+export { FeedbackControl, type FeedbackControlProps, type FeedbackValue } from './FeedbackControl';
+export { SuggestedPrompts, type SuggestedPromptsProps, type SuggestedPrompt } from './SuggestedPrompts';
+export { Citation, SourceList, sourceIcon, sourceAnchor, type CitationProps, type SourceListProps, type AISource, type AISourceType } from './Sources';
+export { Reasoning, type ReasoningProps } from './Reasoning';
+export { ThinkingIndicator, type ThinkingIndicatorProps } from './ThinkingIndicator';
+export { Confidence, type ConfidenceProps } from './Confidence';
+export { AgentPlan, type AgentPlanProps, type AgentStep, type AgentStepStatus } from './AgentPlan';
+export { ToolCall, type ToolCallProps, type ToolCallStatus } from './ToolCall';
+export { ApprovalCard, type ApprovalCardProps, type ApprovalState } from './ApprovalCard';
+export { TaskStatus, taskDoneToast, type TaskStatusProps, type TaskState } from './TaskStatus';
+export { InlineAssist, diffWords, type InlineAssistProps, type InlineAssistSuggestion } from './InlineAssist';
+export { NLFilter, type NLFilterProps } from './NLFilter';
+export { parseNaturalFilter, defaultSynonyms, defaultAmbiguous, type NLInterpretation, type NLChip, type NLSynonyms } from './nlParse';
+export { AISummary, type AISummaryProps, type AISummaryInsight } from './AISummary';
+export { ChartExplain, type ChartExplainProps, type ChartDriver } from './ChartExplain';
+export { GenerativeBlock, Canvas, type GenerativeBlockProps, type CanvasProps } from './GenerativeBlock';
+export { AIErrorState, type AIErrorStateProps, type AIErrorVariant } from './AIErrorState';
+export { UsageMeter, type UsageMeterProps } from './UsageMeter';
+export { MemoryList, type MemoryListProps, type MemoryItem, type MemorySettings } from './MemoryList';

@@ -1,0 +1,20 @@
+.ek-badge {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  height: var(--space-5); padding: 0 var(--space-2);
+  border-radius: 999px; white-space: nowrap;
+  font-family: var(--font-text); font-size: 12px; line-height: 16px; font-weight: 500; /* footnote-emphasized */
+  font-variant-numeric: tabular-nums;
+}
+.ek-badge .ek-icon { width: 14px; height: 14px; margin-left: -2px; }
+.ek-badge--neutral.ek-badge--subtle { background: var(--color-fill-tertiary); color: var(--color-label-secondary); }
+.ek-badge--neutral.ek-badge--solid  { background: var(--color-label-primary); color: var(--color-background-primary); }
+.ek-badge--accent.ek-badge--subtle  { background: var(--color-accent-subtle); color: var(--color-label-link); }
+.ek-badge--accent.ek-badge--solid   { background: var(--color-accent-solid); color: var(--color-label-on-accent); }
+.ek-badge--success.ek-badge--subtle { background: var(--color-success-subtle); color: var(--color-success-text); }
+.ek-badge--success.ek-badge--solid  { background: var(--color-success-solid); color: var(--color-success-on-solid); }
+.ek-badge--warning.ek-badge--subtle { background: var(--color-warning-subtle); color: var(--color-warning-text); }
+.ek-badge--warning.ek-badge--solid  { background: var(--color-warning-solid); color: var(--color-warning-on-solid); }
+.ek-badge--danger.ek-badge--subtle  { background: var(--color-danger-subtle); color: var(--color-danger-text); }
+.ek-badge--danger.ek-badge--solid   { background: var(--color-danger-solid); color: var(--color-danger-on-solid); }
+.ek-badge--info.ek-badge--subtle    { background: var(--color-info-subtle); color: var(--color-info-text); }
+.ek-badge--info.ek-badge--solid     { background: var(--color-info-solid); color: var(--color-info-on-solid); }

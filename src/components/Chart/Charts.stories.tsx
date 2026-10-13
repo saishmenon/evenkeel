@@ -1,0 +1,22 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Chart } from './Chart';
+import { Donut } from '../Donut/Donut';
+import { BarList } from '../BarList/BarList';
+import { Sparkline } from '../Sparkline/Sparkline';
+import { Heatmap } from '../Heatmap/Heatmap';
+import { Gauge } from '../Gauge/Gauge';
+import { Box } from '../Box/Box';
+import { docsParams } from '../../docs/componentDocs';
+import { content } from '../../docs/content';
+
+import { months, heat, volumeByMethod, spendByService, marketVolume } from '../../docs/chartData';
+const meta = { title: 'Components/Data/Chart gallery', tags: ['!autodocs'], parameters: { layout: 'padded' } } satisfies Meta;
+export default meta;
+type S = StoryObj<typeof meta>;
+export const StackedArea: S = { name: 'Stacked area', parameters: docsParams(content.Chart), render: () => <Box title="Volume by method" description="M CAD per month"><Chart type="area" title="Volume by method" unit=" M" labels={months} series={volumeByMethod} /></Box> };
+export const StackedBars: S = { name: 'Stacked bars', render: () => <Box title="Fees by type" description="CAD per month"><Chart type="stacked" title="Fees by type" format={(v) => `$${(v / 1000).toFixed(1)}k`} labels={months} series={spendByService} /></Box> };
+export const DonutChart: S = { name: 'Donut', render: () => <Box title="Fees this month"><Donut title="Fees this month by type" centerValue="$8.2k" centerLabel="total" format={(v) => `$${v}`} data={[{ label: 'Card fees', value: 4900 }, { label: 'Payouts', value: 1720 }, { label: 'API calls', value: 1150 }, { label: 'Buy now, pay later', value: 440 }]} /></Box> };
+export const BarListChart: S = { name: 'Bar list', render: () => <div style={{ maxWidth: 480 }}><Box title="Top markets by volume"><BarList title="Top markets by volume" format={(v) => `${v} M`} data={marketVolume.map((r) => ({ ...r, href: '#' }))} /></Box></div> };
+export const Sparklines: S = { render: () => <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}><Sparkline label="Volume, rising" data={[22, 25, 24, 30, 35, 33, 41, 47]} /><Sparkline label="Errors, falling" tone="danger" data={[12, 15, 11, 9, 7, 8, 4, 3]} /><Sparkline label="Dispute rate, falling" tone="success" data={[18, 17, 16.4, 15, 15.1, 12.4]} area={false} /></div> };
+export const HeatmapChart: S = { name: 'Heatmap', render: () => <div style={{ maxWidth: 760 }}><Box title="Requests by day and hour"><Heatmap title="Requests by day and hour" {...heat} colLabelEvery={3} /></Box></div> };
+export const Gauges: S = { render: () => <div style={{ display: 'flex', gap: 32 }}><Gauge value={42} label="Transactions" caption="8,420 of 20,000" /><Gauge value={78} label="Payouts" caption="78 of 100" /><Gauge value={93} label="API calls" caption="9.3 of 10 M" /></div> };

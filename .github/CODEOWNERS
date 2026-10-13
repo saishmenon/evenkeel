@@ -1,0 +1,14 @@
+# Code owners are requested for review automatically on pull requests.
+# Later rules override earlier ones.
+
+*                       @saishmenon
+
+# Tokens and theming: changes must be mirrored in the Figma library.
+/src/theme/             @saishmenon
+/src/tokens/            @saishmenon
+/scripts/               @saishmenon
+
+# Release and CI
+/.github/               @saishmenon
+/package.json           @saishmenon
+/vite.lib.config.ts     @saishmenon

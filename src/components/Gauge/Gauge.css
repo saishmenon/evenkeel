@@ -1,0 +1,10 @@
+.ek-gauge { display: inline-grid; justify-items: center; gap: 2px; font-family: var(--font-text); text-align: center; }
+.ek-gauge__dial { position: relative; }
+.ek-gauge__dial svg { width: 100%; height: 100%; overflow: visible; }
+.ek-gauge__track, .ek-gauge__fill { fill: none; stroke-width: 9; stroke-linecap: round; }
+.ek-gauge__track { stroke: var(--color-fill-tertiary); }
+.ek-gauge__fill { stroke: var(--ek-tone); transition: stroke-dasharray var(--duration-slow) var(--easing-spring); }
+.ek-gauge__value { position: absolute; left: 0; right: 0; bottom: 0; font-family: var(--font-display); font-size: 22px; line-height: 28px; font-weight: 600; color: var(--color-label-primary); font-variant-numeric: tabular-nums; }
+.ek-gauge__label { font-size: 14px; line-height: 20px; font-weight: 500; color: var(--color-label-primary); }
+.ek-gauge__caption { font-size: 12px; line-height: 16px; color: var(--color-label-secondary); }
+@media (prefers-reduced-motion: reduce) { .ek-gauge__fill { transition: none; } }

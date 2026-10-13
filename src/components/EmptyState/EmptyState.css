@@ -1,0 +1,7 @@
+.ek-empty { display: grid; justify-items: center; text-align: center; gap: var(--space-1); padding: var(--space-12) var(--space-6); font-family: var(--font-text); color: var(--color-label-primary); }
+.ek-empty--compact { padding: var(--space-6) var(--space-4); }
+.ek-empty__icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: var(--space-2); border-radius: 999px; background: var(--color-fill-tertiary); color: var(--color-label-secondary); }
+.ek-empty--compact .ek-empty__icon { width: 40px; height: 40px; }
+.ek-empty__title { font-size: 15px; line-height: 22px; font-weight: 600; }
+.ek-empty__desc { margin: 0; max-width: 44ch; color: var(--color-label-secondary); font-size: 14px; line-height: 20px; }
+.ek-empty__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--control-gap); margin-top: var(--space-3); }

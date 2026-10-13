@@ -1,0 +1,22 @@
+.ek-steps { display: flex; gap: var(--space-2); margin: 0; padding: 0; list-style: none; font-family: var(--font-text); counter-reset: step; }
+.ek-steps--vertical { flex-direction: column; gap: 0; }
+.ek-step { flex: 1; display: flex; align-items: flex-start; gap: var(--space-2_5); min-width: 0; position: relative; }
+.ek-steps--horizontal .ek-step:not(:last-child)::after { content: ''; flex: 1; height: 2px; margin-top: 11px; min-width: var(--space-4); border-radius: 2px; background: var(--color-separator-opaque); }
+.ek-steps--horizontal .ek-step[data-state='complete']::after { background: var(--color-accent-solid); }
+.ek-steps--vertical .ek-step { padding-bottom: var(--space-5); }
+.ek-steps--vertical .ek-step:not(:last-child)::before { content: ''; position: absolute; left: 11px; top: 28px; bottom: 4px; width: 2px; border-radius: 2px; background: var(--color-separator-opaque); }
+.ek-steps--vertical .ek-step[data-state='complete']::before { background: var(--color-accent-solid); }
+.ek-step__marker {
+  flex: none; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 999px;
+  font-size: 12px; line-height: 16px; font-weight: 500; font-variant-numeric: tabular-nums; /* footnote-emphasized */
+  box-shadow: inset 0 0 0 1.5px var(--color-border-control); color: var(--color-label-secondary); background: var(--color-background-primary);
+}
+.ek-step[data-state='current'] .ek-step__marker { box-shadow: inset 0 0 0 2px var(--color-accent-solid); color: var(--color-label-link); }
+.ek-step[data-state='complete'] .ek-step__marker { background: var(--color-accent-solid); color: var(--color-label-on-accent); box-shadow: none; }
+.ek-step__text { display: grid; gap: 2px; padding-top: 2px; min-width: 0; }
+.ek-step__title { font-size: 14px; line-height: 20px; font-weight: 500; color: var(--color-label-secondary); white-space: nowrap; }
+.ek-step[data-state='current'] .ek-step__title, .ek-step[data-state='complete'] .ek-step__title { color: var(--color-label-primary); }
+.ek-step__desc { font-size: 13px; line-height: 18px; color: var(--color-label-secondary); }
+/* Compact: markers and connectors only; titles are visually hidden but still read out. */
+.ek-steps--compact .ek-step__text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ek-steps--compact .ek-step { gap: var(--space-2); }
