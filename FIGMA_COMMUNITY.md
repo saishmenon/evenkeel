@@ -2,7 +2,7 @@
 
 Ready-to-paste copy for publishing the Evenkeel Figma file to the Figma Community. The step-by-step process is in [docs/publishing.md](docs/publishing.md#publishing-the-figma-community-file).
 
-The links below already point at the GitHub repository.
+**Figma first.** The Figma file is published before the code. Until the GitHub repository, npm package and Storybook site are live, the listing says they are coming soon. When they launch, edit the listing: swap the "Coming soon" lines for the links in *Support and links (after the code launches)*.
 
 ---
 
@@ -23,11 +23,11 @@ Calm interfaces for dense data. A themeable design system for data-heavy web app
 ```
 Evenkeel is a free, open-source design system for the screens people stare at all day: dashboards, tables, logs, settings and billing.
 
-It lives in Figma and React at the same time, with the same names in both. Every colour, space, radius and text size is a variable or style, so switching theme, light/dark or density is one click on a frame, and maps one-to-one to the code.
+It is built for Figma and React at the same time, with the same names in both. Every colour, space, radius and text size is a variable or style, so switching theme, light/dark or density is one click on a frame, and maps one-to-one to the code.
 
 Four themes (Default, Graphite, Ember, Studio), each generated from five knobs and checked for WCAG AA contrast in light and dark. Two densities, comfortable and compact. 48 components with real variants, charts, data views, 500+ icons, illustrations, patterns, 20+ page templates and click-through user flows, all built for a fictional payments platform called Mintline.
 
-Code (MIT): github.com/saishmenon/evenkeel · npm i evenkeel-ui
+Coming soon: the React package (MIT), GitHub repository and Storybook site.
 This file is published under CC BY 4.0, as all Community files are.
 ```
 
@@ -63,7 +63,11 @@ design system, ui kit, dashboard, data visualization, dark mode, variables, toke
 Design systems
 ```
 
-## Support and links
+## Support and links (now)
+
+Leave the website and support fields empty for now, or add a contact you're happy to make public. Figma also lets people comment on the Community page.
+
+## Support and links (after the code launches)
 
 | Field | Value |
 |---|---|
@@ -75,7 +79,7 @@ Design systems
 
 ## Licence note
 
-Figma Community files are published under **Creative Commons Attribution 4.0 (CC BY 4.0)**. Figma applies this to every Community file; publishers cannot choose another licence. The Evenkeel **code** is MIT-licensed. Both allow commercial use and modification; CC BY asks for attribution ("Evenkeel, github.com/saishmenon/evenkeel").
+Figma Community files are published under **Creative Commons Attribution 4.0 (CC BY 4.0)**. Figma applies this to every Community file; publishers cannot choose another licence. The Evenkeel **code** is MIT-licensed. Both allow commercial use and modification; CC BY asks for attribution ("Evenkeel design system, Figma Community").
 
 Lucide icons in the file are ISC-licensed; Inter and Bricolage Grotesque are SIL Open Font License 1.1. See `THIRD_PARTY_NOTICES.md` in the repository.
 
