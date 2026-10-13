@@ -2,6 +2,8 @@
 
 Ready-to-paste copy for publishing the Evenkeel Figma file to the Figma Community. The step-by-step process is in [docs/publishing.md](docs/publishing.md#publishing-the-figma-community-file).
 
+**Published 12 Oct 2026:** https://www.figma.com/community/file/1691663776222213480/evenkeel-design-system
+
 **Figma first.** The Figma file is published before the code. Until the GitHub repository, npm package and Storybook site are live, the listing says they are coming soon. When they launch, edit the listing: swap the "Coming soon" lines for the links in *Support and links (after the code launches)*.
 
 ---

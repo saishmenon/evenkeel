@@ -2,7 +2,7 @@
 
 Evenkeel's Figma library is the design half of the system. It uses the same tokens, the same component names and the same variants as the React package, so a design built with it can be handed off without a translation step.
 
-**Community file:** Evenkeel on Figma Community (coming soon)<!--figma-->
+**Community file:** [Evenkeel on Figma Community](https://www.figma.com/community/file/1691663776222213480/evenkeel-design-system)
 
 ## Get started
 

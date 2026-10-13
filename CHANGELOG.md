@@ -13,6 +13,7 @@ The Figma Community file uses the same version numbers as the package.
 One story everywhere. Templates, demos, sample data and the Figma file now follow the same week at Lantern Bikes as the user flows.
 
 ### Added
+- **Published on the [Figma Community](https://www.figma.com/community/file/1691663776222213480/evenkeel-design-system).** The React package, GitHub repository and Storybook site follow.
 - **Start here** walkthrough (`START_HERE.md`) and a Start here section in the Storybook introduction.
 - **Story page** in Figma: the cast, the week of 5–9 October and every flow grouped into chapters.
 - **Mobile app (Figma only):** phone foundations, components and Mintline app screens, with three phone flows (3.2 Ask Mintline from your phone, 3.4 Approve from your phone, 4.1 Refund on the go).
