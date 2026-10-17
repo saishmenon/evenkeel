@@ -1,68 +1,23 @@
 name: Bug report
-description: Something in the React components, tokens or CSS doesn't work as documented.
-title: "[Bug] "
-labels: ["bug", "triage"]
+description: Something doesn't work as expected, in code or in Figma.
+labels: ["bug"]
 body:
-  - type: markdown
+  - type: dropdown
+    id: where
     attributes:
-      value: Thanks for taking the time. A small reproduction (StackBlitz, CodeSandbox or a repo) makes fixes much faster.
-  - type: input
-    id: component
-    attributes:
-      label: Component or area
-      placeholder: e.g. Table, Combo box, tokens, applyTheme()
+      label: Where
+      options: [React package, Figma file, Both]
     validations:
       required: true
   - type: textarea
-    id: what-happened
+    id: what
     attributes:
-      label: What happened?
-      description: What did you see, and what did you expect instead?
+      label: What happened
+      description: What you saw, what you expected, and how to reproduce it. A link or screenshot helps.
     validations:
       required: true
-  - type: textarea
-    id: repro
-    attributes:
-      label: Steps to reproduce
-      placeholder: |
-        1. Render <Table … />
-        2. Press Tab twice
-        3. …
-    validations:
-      required: true
-  - type: input
-    id: link
-    attributes:
-      label: Reproduction link
-  - type: dropdown
-    id: theme
-    attributes:
-      label: Theme
-      multiple: true
-      options: [default, graphite, ember, studio, custom (applyTheme)]
-  - type: dropdown
-    id: mode
-    attributes:
-      label: Mode and density
-      multiple: true
-      options: [light, dark, comfortable, compact]
   - type: input
     id: version
     attributes:
-      label: evenkeel-ui version
-      placeholder: "1.0.0"
-    validations:
-      required: true
-  - type: input
-    id: env
-    attributes:
-      label: Browser, OS and React version
-      placeholder: Firefox 131 on Windows 11, React 18.3
-    validations:
-      required: true
-  - type: checkboxes
-    id: a11y
-    attributes:
-      label: Accessibility
-      options:
-        - label: This affects keyboard, screen reader or contrast behaviour
+      label: Version and browser
+      placeholder: evenkeel-ui 1.1.0, Firefox 131

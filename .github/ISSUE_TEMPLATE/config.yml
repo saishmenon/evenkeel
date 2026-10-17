@@ -1,8 +1,5 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
-  - name: Question or idea
-    url: https://github.com/saishmenon/evenkeel/discussions
-    about: Ask how to use Evenkeel or share an idea before it becomes a request.
-  - name: Security vulnerability
+  - name: Security problem
     url: https://github.com/saishmenon/evenkeel/security/advisories/new
-    about: Please report security issues privately. See SECURITY.md.
+    about: Please report these privately.

@@ -1,6 +1,6 @@
 # Theming
 
-A Evenkeel theme is **five knobs**. Everything else, about 150 colours plus radii and fonts, is generated from them and checked for contrast.
+An Evenkeel theme is **five knobs**. Everything else, about 150 colours plus radii and fonts, is generated from them and checked for contrast.
 
 | Knob | Values | What it changes |
 |---|---|---|

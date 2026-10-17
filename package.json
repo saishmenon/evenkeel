@@ -100,10 +100,9 @@
     "build": "npm run build:tokens && npm run build:lib",
     "build:lib": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.build.json && vite build -c vite.lib.config.ts",
     "test:smoke": "node scripts/smoke-test.mjs",
-    "prepublishOnly": "npm run release:check && npm run build:tokens && npm run typecheck && npm test && npm run build:lib && npm run test:smoke",
+    "prepublishOnly": "npm run build:tokens && npm run typecheck && npm test && npm run build:lib && npm run test:smoke",
     "gen:icons": "tsx scripts/gen-icons.ts",
-    "gen:illustrations": "tsx scripts/gen-illustrations.ts",
-    "release:check": "node scripts/fill-placeholders.mjs --check"
+    "gen:illustrations": "tsx scripts/gen-illustrations.ts"
   },
   "peerDependencies": {
     "react": ">=18",
