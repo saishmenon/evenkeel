@@ -6,10 +6,11 @@
 
 A themeable design system for data-heavy web apps, in Figma and React.
 
+[![npm](https://img.shields.io/npm/v/evenkeel-ui.svg)](https://www.npmjs.com/package/evenkeel-ui)
 [![Figma Community](https://img.shields.io/badge/Figma-Community-a259ff.svg)](https://www.figma.com/community/file/1691663776222213480/evenkeel-design-system)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CI](https://github.com/saishmenon/evenkeel/actions/workflows/ci.yml/badge.svg)](https://github.com/saishmenon/evenkeel/actions/workflows/ci.yml)
-[![Storybook](https://img.shields.io/badge/storybook-live-ff4785.svg)](https://saishmenon.github.io/evenkeel/)
+[![Storybook](https://img.shields.io/badge/storybook-docs-ff4785.svg)](https://saishmenon.github.io/evenkeel/)
 
 [Storybook](https://saishmenon.github.io/evenkeel/) ·
 [Figma Community file](https://www.figma.com/community/file/1691663776222213480/evenkeel-design-system) ·
@@ -86,8 +87,6 @@ Every screen tells one story: **a week at Lantern Bikes**, an online bike shop t
 </table>
 
 ## Install
-
-> **The npm package is coming soon.** The Figma library is [already on the Figma Community](https://www.figma.com/community/file/1691663776222213480/evenkeel-design-system). Until the package is published, clone the repo and run it locally (see [Develop locally](#develop-locally)).
 
 ```sh
 npm i evenkeel-ui
