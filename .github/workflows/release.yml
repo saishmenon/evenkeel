@@ -42,8 +42,13 @@ jobs:
           npm run test:smoke
 
       - name: Publish
+        # Skipped when this version is already on npm (for example, published by hand).
         # Pre-release tags (v1.1.0-beta.1) go to the "next" dist-tag.
         run: |
+          VERSION="$(node -p "require('./package.json').version")"
+          if npm view "evenkeel-ui@$VERSION" version >/dev/null 2>&1; then
+            echo "evenkeel-ui@$VERSION is already on npm, skipping publish"; exit 0
+          fi
           if [[ "$GITHUB_REF_NAME" == *-* ]]; then TAG=next; else TAG=latest; fi
           npm publish --provenance --access public --tag "$TAG" --ignore-scripts
         env:
