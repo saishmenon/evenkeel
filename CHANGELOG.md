@@ -4,7 +4,7 @@ The npm package and the Figma file share version numbers.
 
 ## Unreleased
 
-## 1.1.0 (17 October 2026)
+## 1.1.0 (18 October 2026)
 
 The first public release, on npm, GitHub and the [Figma Community](https://www.figma.com/community/file/1691663776222213480/evenkeel-design-system).
 

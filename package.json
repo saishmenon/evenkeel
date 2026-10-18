@@ -84,8 +84,7 @@
     "node": ">=18"
   },
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "scripts": {
     "test": "npm run test:contrast && npm run test:parity",
